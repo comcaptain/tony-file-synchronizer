@@ -16,7 +16,16 @@ public final class FileTransferServer implements Closeable
 		this.socket = new ServerSocket(port);
 	}
 
-	public static void main(final String[] args) throws IOException
+	public static void main(final String[] args) throws InterruptedException
+	{
+		for (int i = 0; i < 100; i++)
+		{
+			Thread.sleep(100);
+			System.out.print("\33[2K\rText" + i);
+		}
+	}
+
+	public static void abc(final String[] args) throws IOException
 	{
 		try (final FileTransferServer fileTransferServer = new FileTransferServer(1234))
 		{
