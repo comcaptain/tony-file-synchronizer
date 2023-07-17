@@ -1,0 +1,24 @@
+Configuration:
+  status: info
+
+  appenders:
+    Console:
+      name: LogToConsole
+      PatternLayout:
+        Pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS Z} [%t] %c - %msg%n"
+
+    RollingFile:
+      - name: LogToRollingFile
+        fileName: logs/app.log
+        filePattern: "logs/$${date:yyyy-MM}/app-%d{yyyy-MM-dd}.log.zip"
+        PatternLayout:
+          pattern: "[%level] %d{yyyy-MM-dd HH:mm:ss.SSS Z} [%t] %c - %msg%n"
+        Policies:
+          TimeBasedTriggeringPolicy: { }
+
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: LogToConsole
+        - ref: LogToRollingFile

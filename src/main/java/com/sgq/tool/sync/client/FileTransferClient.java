@@ -1,6 +1,6 @@
-package com.sgq.tool.sync;
+package com.sgq.tool.sync.client;
 
-import com.sgq.tool.util.TonyFileUtil;
+import com.sgq.tool.sync.util.TonyFileUtil;
 
 import java.io.*;
 import java.net.InetAddress;

@@ -1,4 +1,4 @@
-package com.sgq.tool.util;
+package com.sgq.tool.sync.util;
 
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;

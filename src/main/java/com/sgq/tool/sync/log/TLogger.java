@@ -1,4 +1,4 @@
-package com.sgq.tool.log;
+package com.sgq.tool.sync.log;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
